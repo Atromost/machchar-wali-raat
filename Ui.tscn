@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://d0e34qm60n05q"]
+
+[ext_resource type="Script" uid="uid://cudbu6ka4bq0t" path="res://control.gd" id="1_aegfc"]
+[ext_resource type="FontFile" uid="uid://tya5q7c7kv1n" path="res://Game Jam Asstes/Super Warming.ttf" id="3_nxicu"]
+[ext_resource type="AudioStream" uid="uid://bbrjri4qer70p" path="res://Game Jam Asstes/poorartistt-game-is-on-video-game-music-no-copyright-426131.mp3" id="4_37rv8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aegfc"]
+load_path = "res://.godot/imported/Full Moon - background.png-1ce7208a1aa2b515641d6c564c3287da.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxicu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mqjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iugqp"]
+bg_color = Color(0.7490888, 0.5710172, 0, 1)
+border_width_left = 20
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.059125952, 0.059125945, 0.059125938, 0.6)
+shadow_size = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aegfc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37rv8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7j36"]
+bg_color = Color(0.73330295, 0.59418774, 0, 1)
+border_width_left = 15
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.2459839, 0.24598393, 0.24598393, 0.6)
+shadow_size = 30
+
+[node name="Control" type="Control" unique_id=2105991608]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aegfc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1620731414]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_aegfc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1681695649]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -344.0
+offset_top = 122.0
+offset_right = 345.0
+offset_bottom = 221.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 55
+theme_override_constants/shadow_outline_size = 131
+theme_override_fonts/font = ExtResource("3_nxicu")
+theme_override_font_sizes/font_size = 121
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nxicu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mqjp")
+text = "Machchar Wali Raat"
+
+[node name="Play" type="Button" parent="TextureRect" unique_id=1324471271]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.372
+anchor_top = 0.578
+anchor_right = 0.372
+anchor_bottom = 0.578
+offset_left = -19.544006
+offset_top = -35.544006
+offset_right = 284.456
+offset_bottom = 35.455963
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_nxicu")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aegfc")
+text = "Play"
+
+[node name="Credits" type="Button" parent="TextureRect" unique_id=1636856961]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.372
+anchor_top = 0.578
+anchor_right = 0.372
+anchor_bottom = 0.578
+offset_left = 36.455994
+offset_top = 61.455994
+offset_right = 206.456
+offset_bottom = 132.456
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_nxicu")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iugqp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37rv8")
+text = "Credits"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=851900687]
+stream = ExtResource("4_37rv8")
+autoplay = true
+
+[node name="Label2" type="Label" parent="." unique_id=1220775152]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 408.0
+offset_top = 544.0
+offset_right = 506.0
+offset_bottom = 584.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 131
+theme_override_fonts/font = ExtResource("3_nxicu")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_q7j36")
+text = "\"Godot\""
+
+[connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="TextureRect/Credits" to="." method="_on_credits_pressed"]

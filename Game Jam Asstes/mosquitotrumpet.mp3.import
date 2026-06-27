@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm6i1jtlwlxwc"
+path="res://.godot/imported/mosquitotrumpet.mp3-11006b52a34def0c7cbf72b17b25a6c9.mp3str"
+
+[deps]
+
+source_file="res://Game Jam Asstes/mosquitotrumpet.mp3"
+dest_files=["res://.godot/imported/mosquitotrumpet.mp3-11006b52a34def0c7cbf72b17b25a6c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

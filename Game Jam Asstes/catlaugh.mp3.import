@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://owa85frn8f4g"
+path="res://.godot/imported/catlaugh.mp3-4d883533cbd05918c7cb93c4b60112ab.mp3str"
+
+[deps]
+
+source_file="res://Game Jam Asstes/catlaugh.mp3"
+dest_files=["res://.godot/imported/catlaugh.mp3-4d883533cbd05918c7cb93c4b60112ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
