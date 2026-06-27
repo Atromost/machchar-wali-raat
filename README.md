@@ -28,6 +28,4 @@ Move your cursor to chase mosquitoes across the screen and click to squash them.
 
 **Squash. Score. Survive.**
 
-## Gameplay Video
-
 [Watch on YouTube](https://www.youtube.com/watch?v=3efndgJLjhs)
